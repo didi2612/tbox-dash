@@ -23,7 +23,7 @@ const Topbar: React.FC = () => {
     <header className="bg-white shadow-md py-3 px-6 fixed top-0 left-0 w-full z-50 flex items-center justify-between">
       {/* Logo & Mobile Menu Button */}
       <div className="flex items-center gap-6">
-        <img src="https://office.iium.edu.my/ocap/wp-content/uploads/sites/2/2023/08/logo-IIUM-ori-768x225-1.png" alt="Logo" className="h-8 w-26" />
+        <img src="https://svgcollections.com/wp-content/uploads/2024/07/bear_head_svg_wmASD.png" alt="Logo" className="h-8 w-26" />
         
         {/* Mobile Menu Toggle */}
         <button 

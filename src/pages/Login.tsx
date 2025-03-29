@@ -56,8 +56,13 @@ const Login: React.FC = () => {
         />
       </div>
       <div className="flex flex-col justify-center items-center bg-white px-10">
-        <h2 className="text-4xl font-bold text-blue-600">Welcome Back</h2>
-        <p className="text-gray-500 text-lg mt-2">Sign in to continue</p>
+      <img 
+    src="https://svgcollections.com/wp-content/uploads/2024/07/bear_head_svg_wmASD.png" 
+    alt="Login Illustration" 
+    className="w-20 h-20 mb-4"
+  />
+  <h2 className="text-4xl font-bold text-blue-600">Welcome Back</h2>
+  <p className="text-gray-500 text-lg mt-2">Sign in to continue</p>
         {error && <p className="text-red-500 mt-2">{error}</p>}
         <form onSubmit={handleLogin} className="mt-8 w-full max-w-lg">
           <div>

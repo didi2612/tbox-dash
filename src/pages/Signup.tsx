@@ -55,11 +55,11 @@ const Signup: React.FC = () => {
       <div className="flex flex-col justify-center items-center bg-white px-10">
         {/* Logo */}
         <div className="mb-6">
-          <img
-            src="https://office.iium.edu.my/ocap/wp-content/uploads/sites/2/2023/08/logo-IIUM-ori-768x225-1.png"
-            alt="Logo"
-            className="w-40"
-          />
+        <img 
+    src="https://svgcollections.com/wp-content/uploads/2024/07/bear_head_svg_wmASD.png" 
+    alt="Login Illustration" 
+    className="w-20 h-20 mb-4"
+  />
         </div>
 
         <h2 className="text-4xl font-bold text-blue-600">Create an Account</h2>
