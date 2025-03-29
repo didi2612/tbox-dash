@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./screens/Login";
-import Signup from "./screens/Signup";
-import Dashboard from "./screens/Dashboard";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-import TBoxScreen from "./screens/Tbox";
+import TBoxScreen from "./pages/Tbox";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null); // Use null to indicate loading state
