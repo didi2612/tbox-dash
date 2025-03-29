@@ -22,10 +22,6 @@ const Dashboard: React.FC = () => {
           setUser(response.data); // Assuming the response contains the user object
           setLoading(false);
           
-        })
-        .catch((error) => {
-          setError("Failed to fetch user data");
-          setLoading(false);
         });
     } else {
       setError("No user data found in localStorage");

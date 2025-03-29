@@ -24,7 +24,7 @@ interface User {
 }
 
 const TBoxScreen: React.FC = () => {
-  const [user, setUser] = useState<User | null>(null); // Set type for user state
+  const [ setUser] = useState<User | null>(null); // Set type for user state
   const [vehicleData, setVehicleData] = useState<VehicleData | null>(null); // Set type for vehicleData
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);

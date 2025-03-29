@@ -5,7 +5,7 @@ import Signup from "./screens/Signup";
 import Dashboard from "./screens/Dashboard";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-import TBoxScreen from "./screens/tbox";
+import TBoxScreen from "./screens/Tbox";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null); // Use null to indicate loading state
