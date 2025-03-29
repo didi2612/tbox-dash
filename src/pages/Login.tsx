@@ -17,7 +17,7 @@ const Login: React.FC = () => {
   useEffect(() => {
     const authToken = localStorage.getItem("authToken");
     if (authToken) {
-      navigate("/dashboard"); // Redirect to dashboard if authToken exists
+      navigate("/"); // Redirect to dashboard if authToken exists
     }
   }, [navigate]); // Re-run when navigate changes
 
@@ -26,7 +26,7 @@ const Login: React.FC = () => {
   
     try {
       const res = await axios.post(
-        "http://localhost:5000/login", // Backend login route
+        "http://100.109.28.20:5000/login", // Backend login route
         { email, password },
         { withCredentials: true } // Ensure cookies are sent with the request
       );
@@ -42,7 +42,7 @@ const Login: React.FC = () => {
       localStorage.setItem("userDetails", JSON.stringify(res.data.user)); // Store the user details
   
       // Redirect after login
-      navigate("/dashboard"); 
+      navigate("/"); 
     } catch (err: any) {
       setError(err.response?.data?.message || "Login failed");
       toast.error(err.response?.data?.message || "Login failed", {

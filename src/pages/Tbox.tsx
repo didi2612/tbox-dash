@@ -38,7 +38,7 @@ const TBoxScreen: React.FC = () => {
       setUser(parsedUser); // Set the user state with the stored user details
       // Fetch the user data based on the user ID (you can customize the URL accordingly)
       axios
-        .get(`http://localhost:5000/get-user/${parsedUser._id}`)
+        .get(`https://100.109.28.20:5000/get-user/${parsedUser._id}`)
         .then((response) => {
           setLoading(false); // Set loading to false after data is fetched
           if (response.data && response.data.tbox) {
@@ -46,7 +46,7 @@ const TBoxScreen: React.FC = () => {
             setUser(response.data);
             // Fetch the vehicle data based on the user's tbox field (deviceName or tbox ID)
             axios
-              .get(`http://localhost:5000/api/vehicle/${tbox}`)
+              .get(`https://100.109.28.20:5000/api/vehicle/${tbox}`)
               .then((vehicleResponse) => {
                 setVehicleData(vehicleResponse.data); // Set the vehicle data
               })

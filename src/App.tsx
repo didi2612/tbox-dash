@@ -31,7 +31,7 @@ const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
 
         // Send the token to the server for verification
         const response = await axios.post(
-          "http://localhost:5000/verify-token", 
+          "https://100.109.28.20:5000/verify-token", 
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -64,7 +64,7 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/tbox" element={<TBoxScreen />} />
-        <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+        <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
       </Routes>
     </Router>
   );
