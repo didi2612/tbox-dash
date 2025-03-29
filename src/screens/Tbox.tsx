@@ -24,7 +24,7 @@ interface User {
 }
 
 const TBoxScreen: React.FC = () => {
-  const [ setUser] = useState<User | null>(null); // Set type for user state
+  const [user, setUser] = useState<User | null>(null); // Set type for user state
   const [vehicleData, setVehicleData] = useState<VehicleData | null>(null); // Set type for vehicleData
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -43,6 +43,7 @@ const TBoxScreen: React.FC = () => {
           setLoading(false); // Set loading to false after data is fetched
           if (response.data && response.data.tbox) {
             const tbox = response.data.tbox;
+            setUser(response.data);
             // Fetch the vehicle data based on the user's tbox field (deviceName or tbox ID)
             axios
               .get(`http://localhost:5000/api/vehicle/${tbox}`)
@@ -96,8 +97,12 @@ const TBoxScreen: React.FC = () => {
 
   return (
     <div className="h-screen bg-gray-100">
-      <Topbar />
+      <Topbar />\
       <div className="container mx-auto p-6 mt-8 max-w-6xl">
+      <div className="text-lg font-semibold text-gray-600 mb-4">
+  Welcome, {user?.fullName || "User"}!
+</div>
+
         <div className="bg-white shadow-lg rounded-lg p-6">
           <h1 className="text-3xl font-semibold text-gray-800 mb-6">TBox Data</h1>
           <div className="grid md:grid-cols-2 gap-8">
