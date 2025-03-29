@@ -18,7 +18,7 @@ const Signup: React.FC = () => {
     }
 
     try {
-      const response = await fetch("https://100.109.28.20:5000/signup", {
+      const response = await fetch("https://serveazp.tailf2655f.ts.net/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName, email, password }),

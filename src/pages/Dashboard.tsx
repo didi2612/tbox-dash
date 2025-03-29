@@ -17,7 +17,7 @@ const Dashboard: React.FC = () => {
       const { _id } = JSON.parse(storedUser); // Parse the userDetails and get the _id
 
       axios
-        .get(`https://100.109.28.20:5000/get-user/${_id}`) // Use the get-user endpoint to fetch user data
+        .get(`https://serveazp.tailf2655f.ts.net/get-user/${_id}`) // Use the get-user endpoint to fetch user data
         .then((response) => {
           setUser(response.data); // Assuming the response contains the user object
           setLoading(false);

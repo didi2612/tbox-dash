@@ -31,7 +31,7 @@ const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
 
         // Send the token to the server for verification
         const response = await axios.post(
-          "https://100.109.28.20:5000/verify-token", 
+          "https://serveazp.tailf2655f.ts.net/verify-token", 
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );
